@@ -4,20 +4,7 @@ This directory contains patch files applied to Realm Swift during the build proc
 
 ## Current Patches
 
-### `disable-codesigning.patch`
-
-**Purpose**: Remove code signing requirement
-
-**What it does**:
-- Removes `codesign` command from `scripts/create-release-package.rb`
-- Removes `SIGNING_IDENTITY` environment variable usage
-
-**Why**:
-- No certificate management needed
-- Anyone can build without Apple Developer account
-- Major projects (Stripe, Realm official) ship unsigned binaries
-
-**Note**: This patch modifies a Ruby script, but our build workflow doesn't run Ruby. The script is only used by Realm's release process which we don't use. We patch it to prevent errors if the script is accidentally invoked.
+None. As of Realm Swift v20.0.4, upstream removed code signing from `scripts/create-release-package.rb`, so no patches are required.
 
 ## How Patches Are Applied
 
@@ -27,7 +14,7 @@ The GitHub Actions workflow automatically applies patches:
 git apply --verbose patches/*.patch
 ```
 
-No Ruby installation required - `git apply` is a Git built-in command.
+If no `.patch` files exist, the loop is a no-op.
 
 ## Creating New Patches
 
@@ -35,7 +22,7 @@ If you need to modify Realm Swift source:
 
 1. Clone and edit:
    ```bash
-   git clone --branch v20.0.3 https://github.com/realm/realm-swift.git
+   git clone --branch v20.0.4 https://github.com/realm/realm-swift.git
    cd realm-swift
    # Make your changes
    ```
@@ -53,11 +40,5 @@ Test patch locally before committing:
 
 ```bash
 cd realm-swift
-git apply --check ../patches/disable-codesigning.patch
+git apply --check ../patches/my-patch.patch
 ```
-
-If it fails, the patch may need updating for newer Realm versions.
-
----
-
-**Last updated**: 2026-01-28
