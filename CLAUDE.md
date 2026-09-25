@@ -45,4 +45,4 @@ Document new patches in `patches/README.md`.
 
 ## Updating Default Xcode Version
 
-Change the `default` value for `xcode-version` input in `.github/workflows/build-release.yml` and update the `runs-on` runner if needed (currently `macos-26`).
+Change the `default` value for `xcode-version` input in `.github/workflows/build-release.yml` and update the `runs-on` runner if needed (currently `macos-27`). The macOS runner major version must match the Xcode major version (e.g. Xcode 27.x requires `macos-27`).
