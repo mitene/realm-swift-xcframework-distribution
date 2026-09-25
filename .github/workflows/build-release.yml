@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   build-and-release:
-    runs-on: macos-27
+    runs-on: xcode-27
     name: Build Realm Swift ${{ inputs.tag }} with Xcode ${{ inputs.xcode-version }}
 
     steps:
