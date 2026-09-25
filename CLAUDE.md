@@ -19,7 +19,7 @@ This repository builds and distributes community XCFrameworks for Realm Swift us
 3. Runs `sh build.sh download-core` then `sh build.sh ios-swift`
 4. Assembles XCFrameworks using `xcodebuild -create-xcframework`
 5. Zips as `Realm@<xcode-version>.spm.zip` / `RealmSwift@<xcode-version>.spm.zip`
-6. Creates or updates a GitHub Release tagged with the Realm tag (e.g. `v20.0.3`)
+6. Creates or updates a GitHub Release tagged with the Realm tag (e.g. `v20.0.5`)
 
 Multiple Xcode versions can be built for the same Realm tag — each run uploads additional zip files to the existing release.
 
