@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Realm Swift git tag to build (e.g., v20.0.3)"
+        description: "Realm Swift git tag to build (e.g., v20.0.5)"
         required: true
-        default: "v20.0.4"
+        default: "v20.0.5"
         type: string
       xcode-version:
-        description: "Xcode version to use (e.g., 26.2)"
+        description: "Xcode version to use (e.g., 27.0)"
         required: true
-        default: "26.2"
+        default: "27.0"
         type: string
 
 permissions:
@@ -19,7 +19,7 @@ permissions:
 
 jobs:
   build-and-release:
-    runs-on: macos-26
+    runs-on: macos-27
     name: Build Realm Swift ${{ inputs.tag }} with Xcode ${{ inputs.xcode-version }}
 
     steps:

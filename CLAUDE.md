@@ -19,7 +19,7 @@ This repository builds and distributes community XCFrameworks for Realm Swift us
 3. Runs `sh build.sh download-core` then `sh build.sh ios-swift`
 4. Assembles XCFrameworks using `xcodebuild -create-xcframework`
 5. Zips as `Realm@<xcode-version>.spm.zip` / `RealmSwift@<xcode-version>.spm.zip`
-6. Creates or updates a GitHub Release tagged with the Realm tag (e.g. `v20.0.3`)
+6. Creates or updates a GitHub Release tagged with the Realm tag (e.g. `v20.0.5`)
 
 Multiple Xcode versions can be built for the same Realm tag — each run uploads additional zip files to the existing release.
 
@@ -45,4 +45,4 @@ Document new patches in `patches/README.md`.
 
 ## Updating Default Xcode Version
 
-Change the `default` value for `xcode-version` input in `.github/workflows/build-release.yml` and update the `runs-on` runner if needed (currently `macos-26`).
+Change the `default` value for `xcode-version` input in `.github/workflows/build-release.yml` and update the `runs-on` runner if needed (currently `macos-27`). The macOS runner major version must match the Xcode major version (e.g. Xcode 27.x requires `macos-27`).
