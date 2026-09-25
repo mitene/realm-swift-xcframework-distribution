@@ -20,7 +20,7 @@ The official [realm/realm-swift](https://github.com/realm/realm-swift) repositor
 2. Click **"Build and Release XCFramework"**
 3. Click **"Run workflow"**
 4. Enter:
-   - **tag**: Realm Swift tag (e.g., `v20.0.3`)
+   - **tag**: Realm Swift tag (e.g., `v20.0.5`)
    - **xcode-version**: Xcode version (e.g., `27.0`)
 5. Wait ~20-30 minutes
 
@@ -45,12 +45,12 @@ Add to `Package.swift`:
 ```swift
 .binaryTarget(
     name: "Realm",
-    url: "https://github.com/ainame/realm-swift-xcframework-distribution/releases/download/v20.0.3/Realm.xcframework.zip",
+    url: "https://github.com/ainame/realm-swift-xcframework-distribution/releases/download/v20.0.5/Realm.xcframework.zip",
     checksum: "..." // Use: swift package compute-checksum Realm.xcframework.zip
 ),
 .binaryTarget(
     name: "RealmSwift",
-    url: "https://github.com/ainame/realm-swift-xcframework-distribution/releases/download/v20.0.3/RealmSwift.xcframework.zip",
+    url: "https://github.com/ainame/realm-swift-xcframework-distribution/releases/download/v20.0.5/RealmSwift.xcframework.zip",
     checksum: "..." // Use: swift package compute-checksum RealmSwift.xcframework.zip
 ),
 ```
@@ -65,7 +65,7 @@ Add to `Package.swift`:
 
 ### New Realm Version
 
-Run workflow with new tag (e.g., `v20.0.4`)
+Run workflow with new tag (e.g., `v20.0.5`)
 
 ### New Xcode Version
 
