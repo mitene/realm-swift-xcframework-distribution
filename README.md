@@ -21,7 +21,7 @@ The official [realm/realm-swift](https://github.com/realm/realm-swift) repositor
 3. Click **"Run workflow"**
 4. Enter:
    - **tag**: Realm Swift tag (e.g., `v20.0.3`)
-   - **xcode-version**: Xcode version (e.g., `16.2`)
+   - **xcode-version**: Xcode version (e.g., `27.0`)
 5. Wait ~20-30 minutes
 
 ### 2. Download
@@ -58,7 +58,7 @@ Add to `Package.swift`:
 ## Build Configuration
 
 - **Platform**: iOS only (device + simulator)
-- **Xcode**: Default 16.2 (configurable)
+- **Xcode**: Default 27.0 (configurable)
 - **Patches**: Code signing removed (no certificate required)
 
 ## Maintenance
@@ -72,8 +72,10 @@ Run workflow with new tag (e.g., `v20.0.4`)
 Update `.github/workflows/build-release.yml`:
 ```yaml
 xcode-version:
-  default: '16.3'  # Update this
+  default: '27.1'  # Update this
 ```
+
+The macOS `runs-on` runner must also match the Xcode major version (e.g. Xcode 27.x requires `macos-27`).
 
 ## Technical Details
 
