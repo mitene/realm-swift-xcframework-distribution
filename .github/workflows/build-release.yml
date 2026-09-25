@@ -9,9 +9,9 @@ on:
         default: "v20.0.4"
         type: string
       xcode-version:
-        description: "Xcode version to use (e.g., 26.2)"
+        description: "Xcode version to use (e.g., 27.0)"
         required: true
-        default: "26.2"
+        default: "27.0"
         type: string
 
 permissions:
