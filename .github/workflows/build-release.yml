@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Realm Swift git tag to build (e.g., v20.0.3)"
+        description: "Realm Swift git tag to build (e.g., v20.0.5)"
         required: true
-        default: "v20.0.4"
+        default: "v20.0.5"
         type: string
       xcode-version:
         description: "Xcode version to use (e.g., 27.0)"
